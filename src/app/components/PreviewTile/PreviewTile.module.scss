@@ -1,0 +1,30 @@
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: calc( var(--padding-vertical) / 4 ) calc( var(--padding-horizontal) / 4 );
+  margin: 0;
+}
+
+.preview {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    padding: calc( var(--padding-vertical) * 1.5 ) calc( var(--padding-horizontal) * 1.5 );
+    color: var(--font-color);
+    margin: var(--margin-vertical) 0;
+}
+
+.button {
+    margin: var(--margin-vertical) auto;
+    width: 90%;
+}
+
+.linkIcon {
+  margin-left: calc( var(--margin-horizontal) / 3 );
+  font-size: 1.2rem;
+}
+
+.brain {
+  font-size: 1.1rem;
+}

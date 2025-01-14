@@ -1,0 +1,12 @@
+.input {
+    margin-right:  calc( var(--margin-horizontal) / 2 );
+}
+
+.label {
+    white-space: nowrap;
+    margin: var(--margin-vertical) var(--margin-horizontal) var(--margin-vertical) 0;
+}
+
+.button {
+    width: 100%;
+}

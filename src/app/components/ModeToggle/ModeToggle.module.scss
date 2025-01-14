@@ -1,0 +1,12 @@
+button.modeToggle {
+  width: 3rem;
+  font-size: 1.3rem;
+  padding: var(--padding-vertical) calc( var(--padding-horizontal) / 2 );
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  color: #FFFFFF;
+}
+.bulb {
+  margin: 0;
+  font-size: 1.2rem;
+}

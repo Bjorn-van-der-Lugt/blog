@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@awesome.me/kit-dc65a18ac2": "^1.0.10",
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "sass": "^1.82.0",
+    "sass-loader": "^16.0.4"
   },
   "devDependencies": {
     "eslint": "^8",
