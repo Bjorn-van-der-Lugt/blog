@@ -15,16 +15,12 @@
     margin: var(--margin-vertical) 0;
 }
 
-.button {
-    margin: var(--margin-vertical) auto;
-    width: 90%;
+.eyeIcon {
+  font-size: 1rem;
+  margin-left: calc( var(--margin-horizontal) / 3 );
 }
 
 .linkIcon {
   margin-left: calc( var(--margin-horizontal) / 3 );
   font-size: 1.2rem;
-}
-
-.brain {
-  font-size: 1.1rem;
 }

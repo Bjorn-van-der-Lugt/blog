@@ -1,14 +1,88 @@
+/* User */ 
+
+.profileForm {
+    display: flex;
+    background-color: var(--input-bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
+.profileDisplay {
+    display: flex;
+    align-items: flex-start;    
+}
+
+.profileThumbNail {
+    margin: 0 var(--margin-vertical) var(--margin-vertical) 0;
+}
+
+.textarea {
+    min-height: 10rem;
+}
+
+/* Other users */
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--input-bg-color);
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: var(--border-radius);
+    padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
+.commentAuthorDisplay {
+    display: flex;
+}
+
+.commentAuthorThumbnail {
+    margin-top: 0;
+}
+
+.commentAuthorNameWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--margin-horizontal);
+}
+
+.commentTime {
+    display: block;
+}
+
+/* Buttons */ 
+
 .buttonContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 
 .button {
-    padding: calc( var(--padding-vertical) / 2 ) var(--padding-horizontal);
+    margin-right: var(--margin-horizontal);
     font-size: 1rem;
 }
 
+.sendButton {
+    margin-bottom: 0;
+}
+
+.loadMoreButton {
+    width: 90%;
+    display: block;
+    margin: calc( var(--margin-vertical) * 1.5 ) auto;
+}
+
+/* Icons */
+
 .icon {
-    margin: 0 calc( var(--margin-horizontal) / 3 ) 0 0;
+    margin: 0 calc( var(--margin-horizontal) / 3 ) 0 calc( var(--margin-horizontal) / 4 );
 }

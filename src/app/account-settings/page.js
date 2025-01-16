@@ -11,6 +11,7 @@ export default function AccountSettings() {
         <div className="page-container">
             <section>
                 <h1>Account settings <i className="fa-duotone fa-solid fa-gear"></i></h1>
+                <p><strong>Welcome Björn van der Lugt !</strong></p>
                 <p>Personalise your experience and manage your sensitive info.</p>
                 </section>
             <section>

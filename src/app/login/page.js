@@ -74,7 +74,7 @@ export default function Login() {
   }
 
   return (
-    <section>
+    <div className="page-container">
       <h1>Login</h1>
       <p>Access your personal data and manage your user preferences.</p>
       <form onSubmit={handleSubmit}>
@@ -107,6 +107,6 @@ export default function Login() {
       <p>
         New here? <Link href="/create-account">Create an account</Link>.
       </p>
-    </section>
+      </div>
   );
 }

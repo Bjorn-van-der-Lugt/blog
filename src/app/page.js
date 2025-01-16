@@ -7,7 +7,9 @@ export default function Home() {
     <div className="page-container">
       <section>
       <h1>Welcome</h1>
-      <p>It’s good to have you here. If you want to learn more about it, head over to the <Link href='/about'>About</Link> page. If not, you can probably find some stuff to your liking below.</p>
+      <p>It’s good to have you here. If you want to learn more about it, 
+         head over to the <Link href='/about'>about</Link> page. Please also read the <Link href='/tos' > ToS</Link> and my <Link href='/privacy-policy'>privacy policy</Link>. 
+         </p>
       </section>
       <section>
         <h2>News</h2>

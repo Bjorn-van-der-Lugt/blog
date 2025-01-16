@@ -3,7 +3,7 @@ import ContactForm from '@/app/components/ContactForm/ContactForm';
 
 export default function() {
     return (
-        <section>
+        <div className="page-container">
             <h1>Contact</h1>
             <p>
             If you'd like to chat, discuss business, or report something, 
@@ -43,6 +43,6 @@ export default function() {
             For more information about me and the work I do, 
             you can also visit my developer <Link href="/" target="_blank" rel="noopener noreferrer">portfolio. </Link> It’s a great place to explore my projects, skills, and professional background.
         </p>
-        </section>
+        </div>
     )
 }

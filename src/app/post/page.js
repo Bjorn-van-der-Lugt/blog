@@ -3,11 +3,13 @@ import CommentSection from "../components/CommentSeciton/CommentSection";
 
 export default function post() {
     return (
-    <div className="post-container">
+    <div className="page-container">
         <article>
     <h1>A Psychoanalysis of The Garden of Earthly Delights by Hieronymus Bosch</h1>
     <div className="metadata">
+        <p><strong>Category:</strong> Soul <i className="fa-sharp-duotone fa-solid fa-eye"></i></p>
         <p><strong>Author:</strong> Björn van der Lugt</p>
+        <p><strong>Tags:</strong> Art Analysis | Hieronymus Bosch</p>
         <p><strong>Date:</strong> <time dateTime="2025-01-11">January 11, 2025</time></p>
     </div>
     <Image src="/images/art/the-garden-of-earthly-delights-hieronymus-bosch-1510.webp" layout="responsive" width={1.76} height={1} priority alt='A triptych painting titled "The Garden of Earthly Delights" by Hieronymus Bosch, 

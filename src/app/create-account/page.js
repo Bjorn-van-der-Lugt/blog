@@ -8,6 +8,7 @@ export default function CreateAccount() {
     firstName: "",
     lastName: "",
     email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   });
@@ -15,6 +16,7 @@ export default function CreateAccount() {
     firstName: "",
     lastName: "",
     email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   });
@@ -112,7 +114,7 @@ export default function CreateAccount() {
   }
 
   return (
-    <section>
+    <div className="page-container">
       <h1>Create an Account</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="first-name">First Name</label>
@@ -145,6 +147,16 @@ export default function CreateAccount() {
         />
         {errors.email && <span className="error">{errors.email}</span>}
 
+        <label htmlFor="username">Username</label>
+        <input
+          id="username"
+          name="username"
+          placeholder="Enter a unique username"
+          value={formData.username}
+          onChange={handleInputChange}
+        />
+        {errors.username && <span className="error">{errors.username}</span>}
+
         <label htmlFor="password">Password</label>
         <input
           id="password"
@@ -173,6 +185,6 @@ export default function CreateAccount() {
           Create Account <i className="fa-duotone fa-solid fa-user"></i>
         </button>
       </form>
-    </section>
+      </div>
   );
 }

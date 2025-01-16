@@ -8,7 +8,9 @@ export default function PreviewTile() {
         <Link href="/post" className={styles.preview}>
             <h3>A Jungian Analysis of The Garden of Earthly Delights</h3>
             <div className="metadata">
+            <p><strong>Category:</strong> Soul <i className={`${styles.eyeIcon} fa-sharp-duotone fa-solid fa-eye`}></i></p>
             <p><strong>Author:</strong> Björn van der Lugt</p>
+            <p><strong>Tags:</strong> Art Analysis | Hieronymus Bosch</p>
             <p><strong>Date:</strong> <time dateTime="2025-01-11">January 11, 2025</time></p>
             </div>
             <p><strong>Read More <i className={`${styles.linkIcon} fa-duotone fa-solid fa-arrow-up-right-from-square`}></i></strong></p>
@@ -28,7 +30,6 @@ export default function PreviewTile() {
     a chaotic scene of earthly indulgence, and the right panel shows the torments of Hell.
     </figcaption>
         </Link>
-        <button className={styles.button}>Load More <i className={`${styles.brain} fa-duotone fa-solid fa-brain`}></i></button>
         </div>
     )
 }

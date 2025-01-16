@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Recent from '../components/Recent/Recent';
+import Popular from '../components/Popular/Popular';
 
 export default function Life() {
     return (
@@ -23,8 +25,8 @@ export default function Life() {
                 her moment of longing and reflection as she weaves her fate-bound tapestry.
                 </figcaption>
                 </section>
-                <section><h2>Recent</h2></section>
-                <section><h2>Popular</h2></section>
+                <section><Recent/></section>
+                <section><Popular/></section>
         </div>
     )
 }

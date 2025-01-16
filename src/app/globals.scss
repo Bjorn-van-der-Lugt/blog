@@ -13,13 +13,14 @@
   --footer-font-color: #FFFFFF;
   --headings-font-color: #EAE6E3;
   --button-bg-color: #8B868E;
-  --button-bg-hover: #BEB8BF;
-  --button-bg-focus: #BEB8BF;
-  --button-font-color: #1D1D27;
+  --button-bg-hover: #6F6A73;
+  --button-bg-focus: #6F6A73;
+  --button-bg-disabled: #4A4A54;
+  --button-font-color: #FFFFFF;
   --button-hover-font-color: #FFFFFF;
   --button-focus-font-color: #FFFFFF;
   --button-focus-outline: 2px solid rgba(0, 0, 0, 0);
-  --link-font-color: #A4A6A4; 
+  --link-font-color: #EEEEEE; 
   --link-hover-font-color: #C6C8C6; 
   --link-focus-font-color: #C6C8C6; 
   --link-focus-outline: 2px solid #FFFFFF;
@@ -42,6 +43,7 @@
   --button-bg-color: #6B90B3;
   --button-bg-hover: #487081;
   --button-bg-focus: #487081;
+  --button-bg-disabled: #D3D3D3;
   --button-font-color: #FFFFFF;
   --button-hover-font-color: #FFFFFF;
   --button-focus-font-color: #FFFFFF;
@@ -70,11 +72,43 @@
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; color: var(--headings-font-color); }
-h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea { margin: calc( var(--margin-vertical) * 1 ) 0; }
-h1 { font-size: 2rem; } h2 { font-size: 1.75rem; line-height: 2.5rem; } h3 { font-size: 1.25rem; }
-h4 { font-size: 1rem; } h5 { font-size: 1.125rem; } h6 { font-size: 1rem; }
-p, ul, figcaption { line-height: 1.6rem; }
-ul { list-style: none; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption { 
+  margin: 0 0 calc( var(--margin-vertical) * 1.5 ) 0; 
+}
+
+h1 { 
+  font-size: 2rem; 
+} 
+
+h2 { 
+  font-size: 1.75rem; 
+  line-height: 2.5rem; 
+} 
+
+h3 { 
+  font-size: 1.25rem; 
+}
+
+h4 { 
+  font-size: 1rem; 
+} 
+
+h5 { 
+  font-size: 1.125rem; 
+} 
+
+h6 { 
+  font-size: 1rem; 
+}
+
+p, ul, figcaption { 
+  line-height: 1.6rem; 
+}
+
+ul { 
+  list-style: none; 
+}
 
 html {
   overflow-x: hidden;
@@ -109,14 +143,12 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0;
-  padding: var(--padding-vertical) calc( var(--padding-horizontal) * 1.75 );
   width: 100%;
 }
 
-.post-container section {
-  padding: 0;
+.page-container {
+  padding: var(--padding-vertical) calc( var(--padding-horizontal) * 1.5 );
 }
-
 
 form {
   display: flex;
@@ -176,6 +208,11 @@ button:focus-visible {
   box-shadow: var(--box-shadow);
   outline: var(--button-focus-outline);
   background-color: var(--button-bg-focus);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: var(--button-bg-disabled);
 }
 
 button i {

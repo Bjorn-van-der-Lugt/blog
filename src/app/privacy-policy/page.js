@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function PrivacyPolicy() {
     return (
-        <div className="page-container">
+    <div className="page-container">
     <section>
         <h1>Privacy Policy</h1>
         <p>
-            <strong>12-14-2024</strong>
+            <strong>2024-12-14</strong>
         </p>
         <p>
             I take your privacy seriously. This Privacy Policy explains how I collect, 

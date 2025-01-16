@@ -3,6 +3,7 @@ import './globals.scss';
 import MenuToggle from '@/app/components/MenuToggle/MenuToggle';
 import Script from 'next/script';
 import Link from 'next/link';
+import ArrowBackUp from './components/ArrowBackUp/ArrowBackUp';
 
 
 const lora = Lora({ weight: ['400', '700'], subsets: ['latin'] });
@@ -18,6 +19,7 @@ function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lora.className} ${roboto.className}`}>
+        <ArrowBackUp/>
         <MenuToggle/>
         <Script src="https://kit.fontawesome.com/e4ca2860c2.js"  strategy="afterInteractive"
           crossOrigin="anonymous"/>
