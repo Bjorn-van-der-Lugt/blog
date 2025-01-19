@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@awesome.me/kit-dc65a18ac2": "^1.0.10",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.82.0",
     "sass-loader": "^16.0.4"
   },
