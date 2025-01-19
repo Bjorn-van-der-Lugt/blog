@@ -110,7 +110,7 @@ export default function CreateAccount() {
   };
 
   if (!isClient) {
-    return <div>Loading...</div>;
+    return <div className="page-container">Loading...</div>;
   }
 
   return (

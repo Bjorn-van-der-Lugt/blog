@@ -31,15 +31,15 @@
   }
   
   .MenuToggle {
-    font-size: 1.3rem;
     position: fixed;
     top: var(--margin-vertical); right: var(--margin-horizontal);
     margin: 0;
-    padding: calc( var(--padding-vertical) / 2 ) calc( var(--padding-horizontal) / 2 );
     z-index: 9000;
+    width: 2rem; height: 2rem;
 }
   .bars {
   margin: 0;
+  font-size: 1.1rem;
 }
 
   .headerList {

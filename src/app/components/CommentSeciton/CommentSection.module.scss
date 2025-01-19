@@ -3,7 +3,6 @@
 .profileForm {
     display: flex;
     background-color: var(--input-bg-color);
-    border-radius: var(--border-radius);
     padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
@@ -83,6 +82,8 @@
 
 /* Icons */
 
-.icon {
-    margin: 0 calc( var(--margin-horizontal) / 3 ) 0 calc( var(--margin-horizontal) / 4 );
+.iconProfile, .iconCommentAuthor {
+    margin-left: calc( var(--margin-horizontal) / 2 );
 }
+
+ 

@@ -27,10 +27,10 @@ export default function() {
                 of topics. While some will deal with the superficial, I’ll also 
                 attempt to explore a holistic approach to “spirituality.” 
                 Let’s be clear, though: this won’t involve contemporary new-age 
-                mumbo jumbo. I hope your time here proves fruitful.
+                mumbo jumbo or self-improvement bogus. I hope your time here proves fruitful.
             </p>
             <p>
-            To learn how your data is collected and used on this site, please review my <Link href="/privacy-policy">privacy policy</Link>.
+            To learn how your data is collected and used on this site, please review my <Link href="/privacy-policy">privacy policy</Link>, please also read the <Link href="/tos">ToS</Link>.
             </p>
             </section>
         </div>

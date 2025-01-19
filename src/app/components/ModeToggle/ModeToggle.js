@@ -9,28 +9,22 @@ export default function ThemeToggle() {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      setTheme(savedTheme);
-      if (savedTheme === 'light') {
-        document.documentElement.classList.add('light');
-      } else {
-        document.documentElement.classList.remove('light');
-      }
-    } else {
+      setTheme(savedTheme); // Sync state with saved theme
+      document.documentElement.classList.add(savedTheme);
+      document.documentElement.classList.remove(savedTheme === 'light' ? 'dark' : 'light');
+    } else if (!document.documentElement.classList.contains('light') && !document.documentElement.classList.contains('dark')) {
+      // Only set default if no theme class exists
       document.documentElement.classList.add('light');
       localStorage.setItem('theme', 'light');
     }
   }, []);
 
   const toggleTheme = () => {
-    if (theme === 'light') {
-      document.documentElement.classList.remove('light');
-      localStorage.setItem('theme', 'dark');
-      setTheme('dark');
-    } else {
-      document.documentElement.classList.add('light');
-      localStorage.setItem('theme', 'light');
-      setTheme('light');
-    }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    document.documentElement.classList.add(newTheme);
+    document.documentElement.classList.remove(theme);
+    localStorage.setItem('theme', newTheme);
+    setTheme(newTheme);
   };
 
   return (
@@ -41,7 +35,7 @@ export default function ThemeToggle() {
         {theme === 'light' ? (
           <i className={`fa-duotone fa-solid fa-lightbulb-slash ${styles.bulb}`}></i>
         ) : (
-          <i className={`fa-duotone fa-solid fa-lightbulb ${styles.bulb}`}></i> 
+          <i className={`fa-duotone fa-solid fa-lightbulb ${styles.bulb}`}></i>
         )} 
       </button>
     </>

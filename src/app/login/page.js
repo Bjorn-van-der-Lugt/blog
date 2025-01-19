@@ -70,7 +70,7 @@ export default function Login() {
   };
 
   if (!isClient) {
-    return <div>Loading...</div>;
+    return <div className="page-container">Loading...</div>;
   }
 
   return (

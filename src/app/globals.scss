@@ -5,9 +5,10 @@
   --padding-horizontal: 1rem;
   --border-radius: 8px;
   --font-size: 16px;
-  --backround-color: #2E2E38;
+  --background-color: #2E2E38;
   --header-bg-color: #5D576B;
   --footer-bg-color: #5D576B;
+  --search-component-bg-color: rgba(46, 46, 56, 1);
   --font-color: #D3CBB8;
   --header-font-color: #FFFFFF;
   --footer-font-color: #FFFFFF;
@@ -33,9 +34,10 @@
 }
 
 .light {
-  --backround-color: #ECECEC;
+  --background-color: #ECECEC;
   --header-bg-color: #A49694;
   --footer-bg-color: #A49694;
+  --search-component-bg-color: rgba(236, 236, 236, 1);
   --font-color: #46494C;
   --header-font-color: #24272A;
   --footer-font-color: #24272A;
@@ -117,7 +119,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  background-color: var(--backround-color);
+  background-color: var(--background-color);
   color: var(--font-color);
   font-family: 'Roboto', serif;
   transition: transform 0.5s ease;
@@ -154,6 +156,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-radius: var(--border-radius);
 }
 
 input, textarea {
@@ -217,7 +220,7 @@ button:disabled {
 
 button i {
   font-size: 1rem;
-  margin-left: calc( var(--margin-horizontal) / 2 );
+  margin: 0 calc( var(--margin-horizontal) / 2 ) 0 calc( var(--margin-horizontal) / 2 );
 }
 
 a { 

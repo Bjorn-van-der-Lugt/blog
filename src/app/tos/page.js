@@ -23,16 +23,24 @@ export default function ToS() {
     </p>
     <ul>
       <li>
-        Please don’t post anything offensive, defamatory, illegal, or anything that violates 
-        the rights of others.
+        Please don’t post anything offensive, abusive, defamatory, obscene, hateful, illegal, or anything 
+        that violates the rights of others.
+      </li>
+      <li>
+        Spamming, phishing, or distributing malware is strictly prohibited.
+      </li>
+      <li>
+        Attempting to hack, disrupt, or gain unauthorized access to the website or its systems is not allowed.
+      </li>
+      <li>
+        Reverse engineering, scraping, or using automated tools to access content without permission is prohibited.
       </li>
       <li>
         You are responsible for keeping your account information accurate and secure.
       </li>
     </ul>
     <p>
-      I reserve the right to moderate, edit, or remove comments or content that don’t follow 
-      these terms.
+      I reserve the right to moderate, edit, or remove comments or content that don’t follow these terms.
     </p>
   </section>
   <section>
@@ -45,20 +53,48 @@ export default function ToS() {
   <section>
     <h2>4. Liability Disclaimer</h2>
     <p>
-      The content on this blog is provided for informational purposes only. I don’t guarantee 
-      that the information is always accurate, complete, or reliable. Please use it at your 
-      own risk.
+      This website and its content are provided "as is" and "as available," without any warranties of any kind, express or implied, 
+      including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+    </p>
+    <p>
+      I do not guarantee that the website will be uninterrupted, error-free, secure, or free of harmful components. 
+      Any use of the website, reliance on its content, or actions taken based on advice, information, or comments provided 
+      is solely at your own risk.
+    </p>
+    <p>
+      To the fullest extent permitted by law, I disclaim all liability for any damages of any kind, including but not limited to 
+      direct, indirect, incidental, consequential, punitive, or special damages, arising from or in connection with your use of 
+      the website, inability to use the website, or any content, including comments, posted by third parties.
     </p>
   </section>
   <section>
     <h2>5. Changes to These Terms</h2>
     <p>
-      I may update these Terms of Service at any time. If I make changes, I’ll post them here, 
-      and they’ll take effect immediately.
+      I reserve the right to update these Terms of Service at any time. Any changes will be effective immediately upon 
+      posting on this page. It is your responsibility to review these Terms periodically for updates. Your continued use 
+      of the website constitutes acceptance of the revised Terms.
     </p>
   </section>
   <section>
-    <h2>6. Contact Me</h2>
+    <h2>6. Governing Law and Dispute Resolution</h2>
+    <p>
+      These Terms of Service are governed by the laws of the Netherlands, without regard to its conflict of law principles. 
+      Any disputes arising from or related to these Terms of Service shall be resolved exclusively in the courts of the Netherlands. 
+      Alternatively, I may require disputes to be resolved through binding arbitration in accordance with Dutch arbitration laws, 
+      at my sole discretion.
+    </p>
+  </section>
+  <section>
+    <h2>7. User-Generated Content</h2>
+    <p>
+      By submitting comments, posts, or other content to this website, you grant me a non-exclusive, worldwide, royalty-free, 
+      perpetual, and irrevocable license to use, reproduce, modify, adapt, publish, translate, distribute, and display such 
+      content in any media. You represent that you have the necessary rights to grant this license and that the content does not 
+      violate the rights of any third party. I reserve the right to remove or modify user-generated content at my sole discretion.
+    </p>
+  </section>
+  <section>
+    <h2>8. Contact Me</h2>
     <p>
       If you have any questions about these Terms of Service, feel free to contact me here 
       <Link href='/contact'></Link>

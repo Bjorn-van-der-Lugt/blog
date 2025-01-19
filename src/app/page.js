@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Popular from './components/Popular/Popular';
-import Recent from './components/Recent/Recent';
+import RecentPopular from './components/RecentPopular/RecentPopular.js';
 
 export default function Home() {
   return (
@@ -19,8 +18,7 @@ export default function Home() {
         along the way. So, stay tuned—there’s more to come!
         </p>
         </section>
-      <section><Recent/></section>
-      <section><Popular/></section>
+     <RecentPopular/>
     </div>
   );
 }

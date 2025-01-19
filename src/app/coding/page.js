@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import Recent from '../components/Recent/Recent';
-import Popular from '../components/Popular/Popular';
+import RecentPopular from '../components/RecentPopular/RecentPopular.js';
 
 export default function Coding() {
     return (
@@ -18,8 +17,7 @@ export default function Coding() {
                    layout='responsive'
                    />
             </section>
-            <section><Recent/></section>
-            <section><Popular/></section>
+          <RecentPopular/>
         </div>
     )
 }

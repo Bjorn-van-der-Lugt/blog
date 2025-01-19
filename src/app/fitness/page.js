@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import Recent from '../components/Recent/Recent';
-import Popular from '../components/Popular/Popular';
+import Recentopular from '../components/RecentPopular/RecentPopular.js';
 
 export default function Fitness() {
     return (
@@ -17,7 +16,7 @@ export default function Fitness() {
              and overcoming seemingly insurmountable challenges. Painting by Peter Paul Rubens, 1615.
              </figcaption>
         </section>
-        <section>
+      
         {/*
         <article>
 
@@ -78,8 +77,7 @@ Sam "Sonny" Bryant Jr.: He began bodybuilding at the age of 44 and went on to be
 Remember, whether you’re young or old, the time to start is now. Build your temple and ensure it stands strong for the rest of your life.
 */}
 
-<Recent/></section>
-        <section><Popular/></section>
+<Recentopular/>
     </div>
     )
 }

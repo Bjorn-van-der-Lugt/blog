@@ -1,0 +1,90 @@
+.searchButton {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    width: 2rem; height: 2rem;
+    z-index: 9000;
+}
+
+.closeButton {
+    display: block;
+    position: fixed;
+    top: 0.5rem; right: 0rem;
+    background-color: transparent;
+    padding: 0;
+    
+}
+.closeIcon {
+    font-size: 2rem;
+    padding: 0;
+    color: var(--button-bg-color);
+}
+
+.searchContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw; height: 100vh;
+    padding: var(--padding-vertical) calc( var(--padding-horizontal) * 1.5 );
+    background-color: var(--search-component-bg-color);
+    z-index: 9000;
+    overflow-y: auto;
+}
+.searchContainer.visible {
+    display: block;
+}
+
+.searchBarWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; margin: 0;
+    width: 100%; height: 3rem;
+    &:focus-within {
+        box-shadow: var(--box-shadow);
+    }
+}
+
+.searchBar {
+    display: block;
+    height: 100%; width: 70%;
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.searchBar:focus-visible, .eraseTextButton:focus-visible, .searchBarSendButton:focus-visible {
+    box-shadow: none;
+}
+
+.searchBarButtonWrapper {
+    display: flex;
+    width: 30%; height: 100%;
+    border-radius: var(--border-radius);
+}
+
+.eraseTextButton {
+    margin: 0;
+    width: 50%;
+    border-radius: 0;
+    background-color: var(--input-bg-color);
+    color: var(--button-bg-color);
+}
+
+.searchBarSendButton {
+    margin: 0; 
+    width: 50%; height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ArrowBackUpButton {
+    position: fixed;
+    right: 1rem; bottom: 0.1rem;
+    border-radius: 50%;
+    z-index: 9999;
+    width: 3rem; height: 3rem;
+}
+.ArrowBackUpButton.show {
+    display: block;
+}

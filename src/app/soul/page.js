@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Popular from '../components/Popular/Popular';
-import Recent from '../components/Recent/Recent';
+import RecentPopular from '../components/RecentPopular/RecentPopular.js';
 
 export default function Soul() {
     return (
@@ -27,12 +26,7 @@ export default function Soul() {
                 embodying themes of beauty, introspection, and the connection between nature and the soul.
                 </figcaption>
             </section>
-            <section>
-               <Recent/>
-            </section>
-            <section>
-                <Popular/>
-            </section>
+            <RecentPopular/>
     </div>
     )
 }
