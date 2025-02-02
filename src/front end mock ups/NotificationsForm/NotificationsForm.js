@@ -37,7 +37,7 @@ export default function NotificationsForm() {
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
         <h3>Notifications</h3>
-        <p>Receive email notifications whenever I post something new.</p>
+        <p>Sign up for email notifications when I post something new. If enough people subscribe, I'll start sending them.</p>
         <h4>Select Categories</h4>
 
         <div className={styles.checkBoxContainer}>

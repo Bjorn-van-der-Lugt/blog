@@ -42,7 +42,7 @@ export default function CommentSection() {
                             <i className={`${styles.iconProfile} fa-duotone fa-solid fa-comment`}></i>
                         </p>
                     </div>
-                    <textarea className={styles.textarea} placeholder="..."></textarea>
+                    <textarea className={styles.textArea} placeholder="..."></textarea>
                     <button className={styles.sendButton}>
                         Send <i className="fa-duotone fa-solid fa-paper-plane"></i>
                     </button>
@@ -63,7 +63,7 @@ export default function CommentSection() {
                             </div>
                         </div>
                         <p className={styles.commentText}>
-                            Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo Homo ...
+                            comment ...
                         </p>
                         <span className={styles.readMore}>Read more ...</span>
                     </div>

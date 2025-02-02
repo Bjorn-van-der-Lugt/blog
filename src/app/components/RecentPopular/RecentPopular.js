@@ -1,5 +1,4 @@
 import PreviewTile from "../PreviewTile/PreviewTile";
-import LoadMoreButton from "../LoadMoreButton/LoadMoreButton";
 
 export default function RecentPopular() {
     const previewCount = 5; 
@@ -11,14 +10,14 @@ export default function RecentPopular() {
             {Array(previewCount).fill().map((_, index) => (
                 <PreviewTile key={index} />
             ))}
-                <LoadMoreButton/>
+                <button className="load-more-button">Load More <i className="fa-duotone fa-solid fa-brain"></i></button>
         </section>
         <section>
             <h2>Popular Posts <i className="fa-duotone fa-solid fa-chess-king"></i></h2>
             {Array(previewCount).fill().map((_, index) => (
                 <PreviewTile key={index} />
             ))}
-            <LoadMoreButton />
+            <button className="load-more-button">Load More <i className="fa-duotone fa-solid fa-brain"></i></button>
         </section>
         </>
     );

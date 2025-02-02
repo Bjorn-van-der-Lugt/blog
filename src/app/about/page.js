@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage';
 
 export default function() {
     return (
@@ -11,7 +12,12 @@ export default function() {
                 don’t seem easily reconcilable. This blog serves as a way to bring some cohesion to those skills, 
                 explore potential avenues for monetization, and create opportunities for learning.
             </p>
-            <Image src="/images/art/the-apparition-gustave-moreau-1876.webp" width={320} height={472} alt="An image of Gustave Moreau's 'The Apparition'"  priority  layout='responsive'/>
+            <ResponsiveImage
+                src="/images/art/the-apparition-gustave-moreau-1876.webp"
+                alt="An image of Gustave Moreau's 'The Apparition'"
+                priority={true}
+                aspectRatio="0.68"
+            />
             <figcaption>
                 Gustave Moreau, *The Apparition*, 1876. A Symbolist depiction of Salome's vision of John the Baptist’s severed head.
             </figcaption>

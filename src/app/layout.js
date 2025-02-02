@@ -10,7 +10,7 @@ const lora = Lora({ weight: ['400', '700'], subsets: ['latin'] });
 const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'] });
 
 export const metadata = {
-  title: "Hero's Lense",
+  title: "Roots",
   description: 'An example description',
 };
 

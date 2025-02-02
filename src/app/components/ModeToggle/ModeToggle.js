@@ -1,42 +1,39 @@
-"use client";
+"use client"
 
 import { useEffect, useState } from 'react';
 import styles from './ModeToggle.module.scss';
 
-export default function ThemeToggle() {
+export default function ModeToggle() {
   const [theme, setTheme] = useState('light');
 
+  // Ensures the theme is synced once the component is mounted on the client
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme); // Sync state with saved theme
-      document.documentElement.classList.add(savedTheme);
-      document.documentElement.classList.remove(savedTheme === 'light' ? 'dark' : 'light');
-    } else if (!document.documentElement.classList.contains('light') && !document.documentElement.classList.contains('dark')) {
-      // Only set default if no theme class exists
-      document.documentElement.classList.add('light');
-      localStorage.setItem('theme', 'light');
-    }
+    // Check localStorage or default to 'light' mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.classList.add(savedTheme);  // Add class to <html> for global styles
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    document.documentElement.classList.add(newTheme);
-    document.documentElement.classList.remove(theme);
-    localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);  // Save the theme preference
   };
 
   return (
     <>
-      <h3>Color theme <i className="fa-duotone fa-solid fa-palette"></i></h3>
+      <h3>
+        Color theme <i className="fa-duotone fa-solid fa-palette"></i>
+      </h3>
       <p>Switch between light and dark mode.</p>
       <button onClick={toggleTheme} className={`${styles.modeToggle} mode-toggle`}>
-        {theme === 'light' ? (
-          <i className={`fa-duotone fa-solid fa-lightbulb-slash ${styles.bulb}`}></i>
+        {theme === "light" ? (
+          <i className={`${styles.bulb} fa-duotone fa-solid fa-lightbulb-slash`}></i>
         ) : (
-          <i className={`fa-duotone fa-solid fa-lightbulb ${styles.bulb}`}></i>
-        )} 
+          <i className={`${styles.bulb} fa-duotone fa-solid fa-lightbulb`}></i>
+        )}
       </button>
     </>
   );

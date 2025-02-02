@@ -5,35 +5,6 @@
   --padding-horizontal: 1rem;
   --border-radius: 8px;
   --font-size: 16px;
-  --background-color: #2E2E38;
-  --header-bg-color: #5D576B;
-  --footer-bg-color: #5D576B;
-  --search-component-bg-color: rgba(46, 46, 56, 1);
-  --font-color: #D3CBB8;
-  --header-font-color: #FFFFFF;
-  --footer-font-color: #FFFFFF;
-  --headings-font-color: #EAE6E3;
-  --button-bg-color: #8B868E;
-  --button-bg-hover: #6F6A73;
-  --button-bg-focus: #6F6A73;
-  --button-bg-disabled: #4A4A54;
-  --button-font-color: #FFFFFF;
-  --button-hover-font-color: #FFFFFF;
-  --button-focus-font-color: #FFFFFF;
-  --button-focus-outline: 2px solid rgba(0, 0, 0, 0);
-  --link-font-color: #EEEEEE; 
-  --link-hover-font-color: #C6C8C6; 
-  --link-focus-font-color: #C6C8C6; 
-  --link-focus-outline: 2px solid #FFFFFF;
-  --header-link-focus-hover-font-color: #EEEEEE;
-  --input-bg-color: #1c1c1e;
-  --input-font-color: #D3CBB8;
-  --input-focus-outline: 2px solid rgba(0, 0, 0, 0); 
-  --error-font-color: #E57373;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-}
-
-.light {
   --background-color: #ECECEC;
   --header-bg-color: #A49694;
   --footer-bg-color: #A49694;
@@ -62,6 +33,35 @@
   --box-shadow: 0 4px 6px rgba(58, 58, 60, 0.5);
 }
 
+.dark {
+  --background-color: #2E2E38;
+  --header-bg-color: #5D576B;
+  --footer-bg-color: #5D576B;
+  --search-component-bg-color: rgba(46, 46, 56, 1);
+  --font-color: #EAE6E3;
+  --header-font-color: #FFFFFF;
+  --footer-font-color: #FFFFFF;
+  --headings-font-color: #FFFFFF;
+  --button-bg-color: #8B868E;
+  --button-bg-hover: #6F6A73;
+  --button-bg-focus: #6F6A73;
+  --button-bg-disabled: #4A4A54;
+  --button-font-color: #FFFFFF;
+  --button-hover-font-color: #FFFFFF;
+  --button-focus-font-color: #FFFFFF;
+  --button-focus-outline: 2px solid rgba(0, 0, 0, 0);
+  --link-font-color: #D3CBB8; 
+  --link-hover-font-color: #B1A886;
+  --link-focus-font-color: #B1A886;
+  --link-focus-outline: 2px solid #FFFFFF;
+  --header-link-focus-hover-font-color: #EEEEEE;
+  --input-bg-color: #1c1c1e;
+  --input-font-color: #D3CBB8;
+  --input-focus-outline: 2px solid rgba(0, 0, 0, 0); 
+  --error-font-color: #E57373;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -75,16 +75,16 @@
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; color: var(--headings-font-color); }
 
-h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption { 
+h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption, .image-container, img { 
   margin: 0 0 calc( var(--margin-vertical) * 1.5 ) 0; 
 }
 
 h1 { 
-  font-size: 2rem; 
+  font-size: 1.65rem; 
 } 
 
 h2 { 
-  font-size: 1.75rem; 
+  font-size: 1.45rem; 
   line-height: 2.5rem; 
 } 
 
@@ -183,11 +183,9 @@ textarea {
 figcaption {
   font-size: 0.85rem;
   font-style: italic;
-  margin-top: calc( var(--margin-vertical) * 0.5 );
 }
 
 img {
-  margin: var(--margin-vertical) 0;
   border-radius: var(--border-radius);
 }
 
@@ -221,6 +219,11 @@ button:disabled {
 button i {
   font-size: 1rem;
   margin: 0 calc( var(--margin-horizontal) / 2 ) 0 calc( var(--margin-horizontal) / 2 );
+}
+
+.load-more-button {
+  margin: var(--margin-vertical) auto;
+  width: 90%;
 }
 
 a { 

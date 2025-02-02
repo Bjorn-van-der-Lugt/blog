@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './Search.module.scss';
 import PreviewTile from '../PreviewTile/PreviewTile';
-import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
 export default function Search() {
     const [isVisible, setIsVisible] = useState(false); 
@@ -112,7 +111,7 @@ export default function Search() {
                         <PreviewTile />
                         <PreviewTile />
                         <PreviewTile />
-                        <LoadMoreButton />
+                        <button className="load-more-button">Load More <i className="fa-duotone fa-solid fa-brain"></i></button>
                     </div>
 
                     {showScrollToTop && (

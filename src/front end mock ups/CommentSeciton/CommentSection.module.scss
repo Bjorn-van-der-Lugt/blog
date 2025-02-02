@@ -15,8 +15,11 @@
     margin: 0 var(--margin-vertical) var(--margin-vertical) 0;
 }
 
-.textarea {
-    min-height: 10rem;
+.textArea {
+    min-height: 7rem;
+}
+.textArea:focus-visible {
+    box-shadow: none;
 }
 
 /* Other users */

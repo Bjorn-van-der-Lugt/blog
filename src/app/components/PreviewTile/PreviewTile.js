@@ -5,7 +5,7 @@ import styles from "./PreviewTile.module.scss";
 export default function PreviewTile() {
     return(
         <div className={styles.previewContainer}>
-        <Link href="/post" className={styles.preview}>
+        <Link href="./mockup-post" className={styles.preview}>
             <h3>A Jungian Analysis of The Garden of Earthly Delights</h3>
             <div className="metadata">
             <p><strong>Category:</strong> Soul <i className={`${styles.eyeIcon} fa-sharp-duotone fa-solid fa-eye`}></i></p>

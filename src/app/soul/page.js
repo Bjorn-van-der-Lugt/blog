@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import RecentPopular from '../components/RecentPopular/RecentPopular.js';
+import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage.js';
 
 export default function Soul() {
     return (
@@ -13,13 +14,13 @@ export default function Soul() {
                 psychology, philosophy, folklore, and spirituality. Along the way, we’ll likely 
                 branch out into related fields like history and evolutionary biology as well.
             </p>
-            <Image src="/images/art/the-soul-of-the-rose-john-william-waterhouse-1903.webp" width={0.65} height={1} 
-            alt="A painting of a woman with red hair wearing an ornate blue robe, 
-            gently smelling a rose in a lush garden, surrounded by soft, 
-            warm colors and intricate floral details."  
-            priority 
-            layout='responsive'
-            />
+            <ResponsiveImage
+             src="/images/art/the-soul-of-the-rose-john-william-waterhouse-1903.webp"
+             alt="A painting of a woman with red hair wearing an ornate blue robe, 
+             gently smelling a rose in a lush garden, surrounded by soft, 
+             warm colors and intricate floral details."
+             priority={true}
+             aspectRatio="0.65"/>
                 <figcaption>
                 The Soul of the Rose" by John William Waterhouse, 
                 1903. A timeless Symbolist masterpiece depicting a woman immersed in the scent of roses, 
