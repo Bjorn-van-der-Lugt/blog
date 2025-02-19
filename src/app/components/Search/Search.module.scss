@@ -88,3 +88,9 @@
 .ArrowBackUpButton.show {
     display: block;
 }
+
+@media (min-width: 1440px) {
+    .searchButton {
+      display: none;
+    }
+  }

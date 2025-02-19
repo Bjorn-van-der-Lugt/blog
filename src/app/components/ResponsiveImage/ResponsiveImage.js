@@ -7,7 +7,7 @@ export default function ResponsiveImage({ src, alt, priority = false, aspectRati
             style={{
                 position: "relative",
                 width: "100%",
-                paddingTop: `calc(100% / (${aspectRatio}))` 
+                paddingTop: `calc(100% / (${aspectRatio}))`,
             }}
         >
             <Image 
@@ -15,7 +15,6 @@ export default function ResponsiveImage({ src, alt, priority = false, aspectRati
                 alt={alt} 
                 priority={priority} 
                 fill 
-                style={{ objectFit: "contain" }}
             />
         </div>
     );

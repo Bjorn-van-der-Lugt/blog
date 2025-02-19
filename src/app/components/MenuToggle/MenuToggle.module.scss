@@ -5,6 +5,7 @@
     top: 0; 
     width: 10rem; height: 100%;
     background-color: var(--header-bg-color);
+    z-index: 9000;
   }
   .header.isOpen {
     transform: translateX(0);
@@ -59,6 +60,39 @@
     width: 1.5rem;
     padding: 0;
     color: inherit;
+}
+
+@media (min-width: 1440px) {
+  .header {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    width: 100%; height: auto;
+    transition: none;
+    box-shadow: var(--box-shadow);
+  }
+
+  .headerNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .headerUl {
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .headerList {
+    white-space: nowrap;
+    margin: 0 var(--margin-horizontal);
+  }
+
+  .MenuToggle {
+    display: none;
+  }
+
 }
 
 @media (max-width: 680px) {

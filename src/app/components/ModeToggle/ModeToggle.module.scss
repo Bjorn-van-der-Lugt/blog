@@ -1,12 +1,16 @@
 button.modeToggle {
-  width: 3rem;
-  font-size: 1.3rem;
-  padding: var(--padding-vertical) calc( var(--padding-horizontal) / 2 );
   border-radius: var(--border-radius);
   box-shadow: none;
   color: #FFFFFF;
+  background-color: transparent;
+  color: var(--header-font-color);
+  margin: 0;
+  padding: var(--padding-vertical) var(--padding-horizontal);
 }
-.bulb {
+.icon {
+  width: 1.5rem;
   margin: 0;
   font-size: 1.2rem;
+  margin-right: calc( var(--margin-horizontal) * 0.8 );
 }
+

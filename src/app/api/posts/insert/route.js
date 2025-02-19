@@ -6,12 +6,11 @@ export async function POST(req) {
   try {
     await connectToDB();
 
-    const body = await req.json(); // Get the JSON data from the request
+    const body = await req.json(); 
     
-    // Create a new post using the Mongoose model
+    console.log(body)
     const newPost = new Post(body);
     
-    // Save to MongoDB (this ensures correct schema validation)
     await newPost.save();
 
     return NextResponse.json({ message: "Post inserted successfully!", post: newPost }, { status: 201 });

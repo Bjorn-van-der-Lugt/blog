@@ -5,6 +5,7 @@ import Script from 'next/script';
 import Link from 'next/link';
 import ArrowBackUp from './components/ArrowBackUp/ArrowBackUp';
 import Search from './components/Search/Search';
+import ModeToggle from './components/ModeToggle/ModeToggle';
 
 const lora = Lora({ weight: ['400', '700'], subsets: ['latin'] });
 const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'] });

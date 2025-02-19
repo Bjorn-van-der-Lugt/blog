@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 import styles from './MenuToggle.module.scss';
+import ModeToggle from "../ModeToggle/ModeToggle";
 
 export default function HeaderNav() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -41,8 +42,8 @@ export default function HeaderNav() {
             <li className={styles.headerList}><Link href="/coding" className={styles.link}><i className={`fa-duotone fa-solid fa-square-code ${styles.icon}`}></i>Coding</Link></li>
             <li className={styles.headerList}><Link href="/about" className={styles.link}><i className={`fa-duotone fa-solid fa-fingerprint ${styles.icon}`}></i> About</Link></li>
             <li className={styles.headerList}><Link href="/contact" className={styles.link}><i className={`fa-duotone fa-solid fa-mailbox ${styles.icon}`}></i> Contact</Link></li>
-            <li className={styles.headerList}><Link href="/login" className={styles.link}><i className={`fa-duotone fa-solid fa-user ${styles.icon}`}></i> Login</Link></li>
-            <li className={styles.headerList}><Link href="/account-settings" className={styles.link}><i className={`fa-duotone fa-solid fa-gears ${styles.icon}`}></i>Settings</Link></li>
+            {/*<li className={styles.headerList}><Link href="/login" className={styles.link}><i className={`fa-duotone fa-solid fa-user ${styles.icon}`}></i> Login</Link></li>*/}
+            {/*<li className={styles.headerList}><Link href="/account-settings" className={styles.link}><i className={`fa-duotone fa-solid fa-gears ${styles.icon}`}></i>Settings</Link></li>*/}
             <li className={styles.headerList}>
               <Link href="https://www.paypal.com/donate/?hosted_button_id=NCRQHDJWRPDHC" 
                     target="_blank" 
@@ -51,6 +52,7 @@ export default function HeaderNav() {
                       <i className={`fa-duotone fa-solid fa-hand-holding-circle-dollar ${styles.icon}`}></i> Donate
                 </Link>
               </li>
+              <li className={styles.headerList}><ModeToggle/></li>
           </ul>
       </nav>
     </header>

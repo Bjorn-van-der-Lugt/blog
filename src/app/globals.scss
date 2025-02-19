@@ -75,17 +75,18 @@
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; color: var(--headings-font-color); }
 
-h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption, .image-container, img { 
+h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption, .image-container { 
   margin: 0 0 calc( var(--margin-vertical) * 1.5 ) 0; 
 }
 
 h1 { 
   font-size: 1.65rem; 
+  line-height: 2.3rem;
 } 
 
 h2 { 
   font-size: 1.45rem; 
-  line-height: 2.5rem; 
+  line-height: 2.3rem;
 } 
 
 h3 { 
@@ -148,6 +149,10 @@ section {
   width: 100%;
 }
 
+figure {
+  width: 100%;
+}
+
 .page-container {
   padding: var(--padding-vertical) calc( var(--padding-horizontal) * 1.5 );
 }
@@ -177,7 +182,13 @@ input:focus-visible, textarea:focus-visible {
 }
 
 textarea {
-  height: 3rem;
+  height: 10rem;
+}
+
+label, input {
+  display: block;
+  width: 100%;
+  margin: var(--margin-vertical) 0;
 }
 
 figcaption {
@@ -254,4 +265,16 @@ footer {
 
 footer a {
   color: inherit;
+}
+
+@media (min-width: 1440px) {
+  main {
+    transition: none;
+    padding-top: 7rem;
+  }
+  .page-container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: calc( var(--padding-vertical) * 1.5 ) calc( var(--padding-horizontal) * 1.5 );
+  }
 }

@@ -1,0 +1,36 @@
+
+{    
+    
+  "article": {
+      "title": "",
+      "metadata": {
+      "author": "Björn van der Lugt",
+      "category": "",
+      "tags": [],
+      "createdAt": "<CURRENT_DATE_ISO>",
+      "lastEditedAt": null
+        },
+          "sections": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "content": ""
+                }
+              ]
+            }
+          ]
+        },
+
+        "images": [
+          {
+            "src": "/images/art/",
+            "alt": "",
+            "aspectRatio": "",
+            "caption": ""
+          }
+        ]
+
+      }
+
+     

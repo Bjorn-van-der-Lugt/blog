@@ -1,70 +1,43 @@
 import mongoose from 'mongoose';
 
-// Image Schema
+// Image Schema 
 const ImageSchema = new mongoose.Schema({
   src: { type: String, required: true },
   alt: { type: String, required: true },
+  aspectRatio: { type: String, required: true }, 
+  priority: { type: Boolean, default: false },
   caption: { type: String },
 });
 
-// Paragraph Schema
+// Paragraph Schema 
 const ParagraphSchema = new mongoose.Schema({
   content: { type: String, required: true },
-  image: { type: ImageSchema, default: null },
 });
 
-// Section Schema
+// Section Schema 
 const SectionSchema = new mongoose.Schema({
-  heading: { type: String, required: true },
+  heading: { type: String },
   images: [ImageSchema],
   paragraphs: [ParagraphSchema],
 });
 
-// Post Schema
+// Article Schema 
+const ArticleSchema = new mongoose.Schema({
+  sections: [SectionSchema], 
+});
+
+// Post Schema 
 const PostSchema = new mongoose.Schema({
-  title: { type: String, required: true },
   metadata: {
+    title: { type: String, required: true },
     author: { type: String, required: true },
     category: { type: String, required: true },
-    tags: [{ type: String }],
+    tags: { type: [String], required: true },
     createdAt: { type: Date, required: true },
     lastEditedAt: { type: Date, default: null },
   },
-  sections: [SectionSchema],
+  article: ArticleSchema,
 });
 
-// **Pre-save Hook to Normalize and Lowercase Fields**
-PostSchema.pre('save', function (next) {
-  // Normalize & lowercase the author
-  if (this.metadata.author) {
-    this.metadata.author = this.metadata.author
-      .toLowerCase() // Convert to lowercase
-      .normalize('NFD') // Normalize Unicode characters
-      .replace(/[\u0300-\u036f]/g, ''); // Remove diacritics (e.g., ö → o)
-  }
-
-  // Normalize & lowercase the category
-  if (this.metadata.category) {
-    this.metadata.category = this.metadata.category
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
-  }
-
-  // **Optional:** Normalize & lowercase each tag
-  if (this.metadata.tags && Array.isArray(this.metadata.tags)) {
-    this.metadata.tags = this.metadata.tags.map((tag) =>
-      tag
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-    );
-  }
-
-  next();
-});
-
-// **Post Model Initialization**
 const Post = mongoose.models.Post || mongoose.model('Post', PostSchema);
-
 export default Post;

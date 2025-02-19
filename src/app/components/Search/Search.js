@@ -76,7 +76,7 @@ export default function Search() {
                     className={`${styles.searchContainer} ${styles.visible}`}
                 >
                     <h2>Search <i className="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></h2>
-                    <p>Search a blog post by title, author, date or tag.</p>
+                    <p>Search a blog post by title, author, date, tag or any combination.</p>
                     <button className={styles.closeButton} onClick={hideSearch}>
                         <i className={`${styles.closeIcon} fa-duotone fa-solid fa-circle-xmark`}></i>
                     </button>
