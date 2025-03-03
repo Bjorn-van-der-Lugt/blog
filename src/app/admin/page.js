@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
-import ResponsiveImage from "../components/ResponsiveImage/ResponsiveImage";
+import ResponsiveImageClient from "../components/ResponsiveImageClient/ResponsiveImageClient";
 
 export default function AdminPanel() {
   const [jsonInput, setJsonInput] = useState("");
@@ -16,7 +17,6 @@ export default function AdminPanel() {
 
     try {
       let postData = JSON.parse(jsonInput);
-
       postData.metadata.createdAt = new Date(postData.metadata.createdAt);
 
       const response = await fetch("/api/posts/insert", {
@@ -55,70 +55,152 @@ export default function AdminPanel() {
           onChange={(e) => setJsonInput(e.target.value)}
           required
         />
-        <button type="button" onClick={handlePreview}>Preview</button>
-        <button type="submit" disabled={loading}>{loading ? "Posting..." : "Submit JSON"}</button>
+        <button type="button" onClick={handlePreview}>
+          Preview
+        </button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Posting..." : "Submit JSON"}
+        </button>
       </form>
-    
+
       {message && <p>{message}</p>}
 
       {previewData?.article && (
         <div className="preview">
           <article>
-            {previewData.article.sections?.[0] && (
-              <section>
-                <h1>{previewData.article.sections[0].heading}</h1>
+            <section>
+              <h1>{previewData.metadata.title}</h1>
+              {(() => {
+                const firstImageContent = previewData.article.sections[0]?.content?.find(
+                  (item) => item.type === "image"
+                );
+                const firstImage = firstImageContent?.image[0];
 
-                {previewData.article.sections[0].images?.map((image, iIndex) => (
-                  <div key={iIndex}>
-                    <ResponsiveImage
-                      src={image.src}
-                      alt={image.alt}
-                      aspectRatio={image.aspectRatio}
-                      {...(image.priority && { priority: true })}
+                return firstImage ? (
+                  <figure>
+                    <ResponsiveImageClient
+                      src={firstImage.src}
+                      alt={firstImage.alt}
+                      aspectRatio={firstImage.aspectRatio}
+                      priority={true}
                     />
-                    {image.caption && <p className="figcaption">{image.caption}</p>}
-                  </div>
-                ))}
-
-                <div className="metadata">
-                  <p><strong>Title:</strong> {previewData.metadata.title}</p>
-                  <p><strong>Author:</strong> {previewData.metadata?.author}</p>
-                  <p><strong>Category:</strong> {previewData.metadata?.category}</p>
-                  <p><strong>Tags:</strong> {previewData.metadata?.tags?.join(" | ")}</p>
-                  <p><strong>Date:</strong> {previewData.metadata?.createdAt ? new Date(previewData.metadata.createdAt).toLocaleDateString() : "Unknown"}</p>
-                </div>
-
-                {previewData.article.sections[0].paragraphs?.[0] && (
-                  <p>{previewData.article.sections[0].paragraphs[0].content}</p>
-                )}
-              </section>
-            )}
-
-            {previewData.article.sections?.slice(1).map((section, index) => (
-              <section key={index + 1}>
-                <h2>{section.heading}</h2>
-
-                {section.images?.map((image, iIndex) => (
-                  <figure key={iIndex}>
-                    <ResponsiveImage
-                      src={image.src}
-                      alt={image.alt}
-                      aspectRatio={image.aspectRatio}
-                      {...(image.priority && { priority: true })}
-                    />
-                    {image.caption && <p className="figcaption">{image.caption}</p>}
+                    {firstImage && <figcaption>{firstImage.caption}</figcaption>}
                   </figure>
-                ))}
+                ) : null;
+              })()}
+              <div className="metadata">
+                <p>
+                  <strong>Title:</strong> {previewData.metadata.title}
+                </p>
+                <p>
+                  <strong>Summary:</strong> {previewData.metadata.summary}
+                </p>
+                <p>
+                  <strong>Author:</strong> {previewData.metadata.author}
+                </p>
+                <p>
+                  <strong>Category:</strong> {previewData.metadata.category}
+                </p>
+                <p>
+                  <strong>Tags:</strong> {previewData.metadata.tags.join(" | ")}
+                </p>
+                <p>
+                  <strong>Reading Time:</strong> {previewData.metadata.readingTime}
+                </p>
+                <p>
+                  <strong>Date:</strong>{" "}
+                  {previewData.metadata.createdAt
+                    ? new Date(previewData.metadata.createdAt).toLocaleDateString()
+                    : "Unknown"}
+                </p>
+              </div>
+              {previewData.article.sections[0]?.content?.map((item, index) => {
+                if (index === 0 && item.type === "image") {
+                  return null;
+                }
+                switch (item.type) {
+                  case "heading":
+                    return React.createElement(`h${item.level || 2}`, { key: index }, item.text);
 
-                {section.paragraphs?.map((paragraph, pIndex) => (
-                  <p key={pIndex}>{paragraph.content}</p>
-                ))}
+                  case "paragraph":
+                    return <p key={index}>{item.text}</p>;
+
+                  case "list":
+                    return item.list?.ordered ? (
+                      <ol key={index}>
+                        {item.list.items.map((listItem, lIndex) => (
+                          <li key={lIndex}>{listItem}</li>
+                        ))}
+                      </ol>
+                    ) : (
+                      <ul key={index}>
+                        {item.list.items.map((listItem, lIndex) => (
+                          <li key={lIndex}>{listItem}</li>
+                        ))}
+                      </ul>
+                    );
+
+                  case "image":
+                    return item.image.map((img, imgIndex) => (
+                      <figure key={imgIndex}>
+                        <ResponsiveImageClient
+                          src={img.src}
+                          alt={img.alt}
+                          aspectRatio={img.aspectRatio}
+                        />
+                        {img.caption && <figcaption>{img.caption}</figcaption>}
+                      </figure>
+                    ));
+                  default:
+                    return null;
+                }
+              })}
+            </section>
+            {previewData.article.sections.slice(1).map((section, sectionIndex) => (
+              <section key={sectionIndex + 1}>
+                {section.content.map((item, contentIndex) => {
+                  switch (item.type) {
+                    case "heading":
+                      return React.createElement(`h${item.level || 2}`, { key: contentIndex }, item.text);
+
+                    case "paragraph":
+                      return <p key={contentIndex}>{item.text}</p>;
+
+                    case "list":
+                      return item.list?.ordered ? (
+                        <ol key={contentIndex}>
+                          {item.list.items.map((item, listIndex) => (
+                            <li key={listIndex}>{item}</li>
+                          ))}
+                        </ol>
+                      ) : (
+                        <ul key={contentIndex}>
+                          {item.list.items.map((item, listIndex) => (
+                            <li key={listIndex}>{item}</li>
+                          ))}
+                        </ul>
+                      );
+
+                    case "image":
+                      return item.image.map((img, imgIndex) => (
+                        <figure key={imgIndex}>
+                          <ResponsiveImageClient
+                            src={img.src}
+                            alt={img.alt}
+                            aspectRatio={img.aspectRatio}
+                          />
+                          {img.caption && <figcaption>{img.caption}</figcaption>}
+                        </figure>
+                      ));
+                    default:
+                      return null;
+                  }
+                })}
               </section>
-            )) || <p>No sections available.</p>}
+            ))}
           </article>
         </div>
       )}
     </div>
   );
 }
-

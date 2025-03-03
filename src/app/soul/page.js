@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import RecentPopular from '../components/RecentPopular/RecentPopular.js';
-import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage.js';
+import ResponsiveImageClient from '../components/ResponsiveImageClient/ResponsiveImageClient.js';
 
 export default function Soul() {
     return (
@@ -14,7 +14,7 @@ export default function Soul() {
                 psychology, philosophy, folklore, and spirituality. Along the way, we’ll likely 
                 branch out into related fields like history and evolutionary biology as well.
             </p>
-            <ResponsiveImage
+            <ResponsiveImageClient
              src="/images/art/the-soul-of-the-rose-john-william-waterhouse-1903.webp"
              alt="A painting of a woman with red hair wearing an ornate blue robe, 
              gently smelling a rose in a lush garden, surrounded by soft, 

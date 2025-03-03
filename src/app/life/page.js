@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import RecentPopular from '../components/RecentPopular/RecentPopular.js';
-import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage.js';
+import ResponsiveImageClient from '../components/ResponsiveImageClient/ResponsiveImageClient.js';
 
 export default function Life() {
     return (
@@ -14,7 +14,7 @@ export default function Life() {
                 your place in society and navigating life's many roles, 
                 with new topics added regularly.
              </p>
-             <ResponsiveImage
+             <ResponsiveImageClient
               src="/images/art/I-am-half-sick-of-shadows-said-the-lady-of-shalot-john-william-waterhouse-1880.webp"
               alt="A painting by John William Waterhouse titled 'I am half-sick of shadows, said the lady of Shalott.' 
               It depicts a woman in a red dress sitting in a richly decorated interior with a loom in front of her. 

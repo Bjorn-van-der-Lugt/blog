@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage';
+import ResponsiveImageClient from '../components/ResponsiveImageClient/ResponsiveImageClient';
 
 export default function() {
     return (
@@ -12,7 +12,7 @@ export default function() {
                 don’t seem easily reconcilable. This blog serves as a way to bring some cohesion to those skills, 
                 explore potential avenues for monetization, and create opportunities for learning.
             </p>
-            <ResponsiveImage
+            <ResponsiveImageClient
                 src="/images/art/the-apparition-gustave-moreau-1876.webp"
                 alt="An image of Gustave Moreau's 'The Apparition'"
                 priority={true}

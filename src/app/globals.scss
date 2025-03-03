@@ -75,7 +75,7 @@
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; color: var(--headings-font-color); }
 
-h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption, .image-container { 
+h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, figcaption, .wrapper { 
   margin: 0 0 calc( var(--margin-vertical) * 1.5 ) 0; 
 }
 
@@ -268,6 +268,10 @@ footer a {
 }
 
 @media (min-width: 1440px) {
+  h1, h2, h3, h4, h5, h6, p, ul, li, button, input, label, form, textarea, section, .image-container, figcaption, .wrapper { 
+    margin: 0 0 calc( var(--margin-vertical) * 1.5 ) 0; 
+  }
+
   main {
     transition: none;
     padding-top: 7rem;
@@ -276,5 +280,8 @@ footer a {
     max-width: 50rem;
     margin: 0 auto;
     padding: calc( var(--padding-vertical) * 1.5 ) calc( var(--padding-horizontal) * 1.5 );
+  }
+  figure {
+    margin: auto auto calc( var(--margin-vertical) * 2 ) auto;
   }
 }

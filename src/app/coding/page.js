@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import RecentPopular from '../components/RecentPopular/RecentPopular.js';
-import ResponsiveImage from '../components/ResponsiveImage/ResponsiveImage.js';
+import ResponsiveImageClient from '../components/ResponsiveImageClient/ResponsiveImageClient.js';
 
 export default function Coding() {
     return (
@@ -12,7 +12,7 @@ export default function Coding() {
                    the way. For now, the focus will be on smaller topics like HTML, 
                    CSS/SCSS, JavaScript, React, Next.js, and some refinement details 
                    such as favicons, font icons, and more.</p>
-                   <ResponsiveImage
+                   <ResponsiveImageClient
                    src="/images/stock-photos/coding-introduction-image.webp"
                    alt="An image of a pair of glasses on a desk, in front of 2 monitors with code displayed."
                    priority={true}

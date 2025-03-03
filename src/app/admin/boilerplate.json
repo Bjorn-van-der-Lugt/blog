@@ -1,36 +1,45 @@
-
-{    
-    
+{
+  "metadata": {
+    "title": "",
+    "slug": "",
+    "summary": "",
+    "author": "",
+    "category": "",
+    "tags": "",
+    "readingTime": "",
+    "featuredImage": {
+      "src": "",
+      "alt": ""
+    },
+    "createdAt": "<CURRENT_DATE_ISO>"
+  },
   "article": {
-      "title": "",
-      "metadata": {
-      "author": "Björn van der Lugt",
-      "category": "",
-      "tags": [],
-      "createdAt": "<CURRENT_DATE_ISO>",
-      "lastEditedAt": null
-        },
-          "sections": [
-            {
-              "heading": "",
-              "paragraphs": [
-                {
-                  "content": ""
-                }
-              ]
-            }
-          ]
-        },
-
-        "images": [
+    "sections": [
+      {
+        "heading": "",
+        "paragraphs": [
           {
-            "src": "/images/art/",
-            "alt": "",
-            "aspectRatio": "",
-            "caption": ""
+            "content": ""
+          }
+        ],
+        "lists": [
+          {
+            "items": [],
+            "ordered": false
           }
         ]
-
       }
+    ],
+    "images": [
+      {
+        "src": "/images/art/",
+        "alt": "",
+        "aspectRatio": "",
+        "caption": ""
+      }
+    ]
+  }
+}
+
 
      

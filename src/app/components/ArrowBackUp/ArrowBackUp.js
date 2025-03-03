@@ -28,7 +28,7 @@ export default function ArrowBackUp() {
             onClick={scrollToTop}
             aria-label="Back to Top"
         >
-            <i className={`${styles.arrowIcon} fa-duotone fa-solid fa-arrow-up-right-dots`}></i>
+            <i className={`${styles.arrowIcon} fa-duotone fa-solid fa-arrow-up`}></i>
         </button>
     );
 }

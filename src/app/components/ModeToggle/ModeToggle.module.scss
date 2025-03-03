@@ -1,4 +1,4 @@
-button.modeToggle {
+.modeToggle {
   border-radius: var(--border-radius);
   box-shadow: none;
   color: #FFFFFF;
@@ -6,11 +6,13 @@ button.modeToggle {
   color: var(--header-font-color);
   margin: 0;
   padding: var(--padding-vertical) var(--padding-horizontal);
+
+  .icon {
+    width: 1.5rem;
+    margin: 0;
+    font-size: 1.2rem;
+    margin-right: calc( var(--margin-horizontal) * 0.8 );
+  }
 }
-.icon {
-  width: 1.5rem;
-  margin: 0;
-  font-size: 1.2rem;
-  margin-right: calc( var(--margin-horizontal) * 0.8 );
-}
+
 
